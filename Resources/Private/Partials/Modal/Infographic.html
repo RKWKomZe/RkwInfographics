@@ -56,6 +56,15 @@
                             <f:cObject typoscriptObjectPath="lib.txRkwInfographics.resources.fileDownload" data="{uid: '{infographic.uid}'}" />
                         </li>
                     </ul>
+
+                    <f:if condition="{settings.showPid}">
+                        <f:then>
+                            <f:link.action action="show" pageUid="{settings.showPid}" arguments="{infographic: '{infographic}'}" >
+                                {settings.showPid}
+                            </f:link.action>
+                        </f:then>
+                    </f:if>
+
                 </div>
             </footer>
         </div>

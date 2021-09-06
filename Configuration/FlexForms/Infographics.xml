@@ -16,11 +16,11 @@
                                 <items type="array">
                                     <numIndex index="0" type="array">
                                         <numIndex index="0">LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographic.list</numIndex>
-                                        <numIndex index="1">Infographic->list</numIndex>
+                                        <numIndex index="1">Infographics->list;Infographics->show</numIndex>
                                     </numIndex>
                                     <numIndex index="1" type="array">
                                         <numIndex index="0">LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographic.detail</numIndex>
-                                        <numIndex index="1">Infographic->show</numIndex>
+                                        <numIndex index="1">Infographics->show</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
@@ -30,7 +30,7 @@
                     <settings.infographicsUids>
                         <TCEforms>
                             <label>LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.select.infographics</label>
-                            <displayCond>FIELD:switchableControllerActions:=:Infographic->list</displayCond>
+                            <displayCond>FIELD:switchableControllerActions:=:Infographics->list;Infographics->show</displayCond>
                             <config>
                                 <size>5</size>
                                 <minitems>0</minitems>

@@ -15,6 +15,8 @@ namespace RKW\RkwInfographics\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /**
  * InfographicsController
  *
@@ -50,13 +52,13 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     /**
      * action show
      *
-     * @param \RKW\RkwInfographic\Domain\Model\Infographic $infographic
+     * @param \RKW\RkwInfographics\Domain\Model\Infographic $infographic
      * @return void
      * @ignorevalidation $event
      */
-    public function showAction(\RKW\RkwInfographic\Domain\Model\Infographic $infographic = null)
+    public function showAction(\RKW\RkwInfographics\Domain\Model\Infographic $infographic = null)
     {
-        $this->view->assign('$infographic', $infographic);
+        $this->view->assign('infographic', $infographic);
     }
 
 

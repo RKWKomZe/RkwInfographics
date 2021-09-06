@@ -18,6 +18,8 @@ plugin.tx_rkwinfographics {
         #callDefaultActionIfActionCantBeResolved = 1
     }
     settings {
+        # cat=plugin.tx_infographics//a; type=string; label=show pid
+        showPid = {$plugin.tx_rkwinfographics.settings.showPid}
     }
 }
 
