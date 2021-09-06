@@ -1,0 +1,27 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographics.sheetTitle</sheetTitle>
+				</TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.infographicsUids>
+                        <TCEforms>
+                            <label>LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.select.infographics</label>
+                            <config>
+                                <size>5</size>
+                                <type>select</type>
+                                <foreign_table>tx_rkwinfographics_domain_model_infographic</foreign_table>
+                                <foreign_table_where>
+                                    AND tx_rkwinfographics_domain_model_infographic.deleted = 0 AND tx_rkwinfographics_domain_model_infographic.hidden = 0 ORDER BY tx_rkwinfographics_domain_model_infographic.title
+                                </foreign_table_where>
+                            </config>
+                        </TCEforms>
+                    </settings.infographicsUids>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

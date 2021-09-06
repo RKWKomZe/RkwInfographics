@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-02-08T15:53:32Z" product-name="rkw_graphics">
+		<header/>
+		<body>
+
+            <!-- tx_rkwinfographics_domain_model_infographic -->
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic">
+				<source>RKW Infographics: Infographic</source>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.title">
+				<source>Title</source>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.description">
+				<source>Description</source>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.image_teaser">
+				<source>Teaser image</source>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.image_detail">
+				<source>Detail image</source>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.image_social">
+				<source>Social media image</source>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.download">
+				<source>Download</source>
+			</trans-unit>
+
+            <trans-unit id="flexform.select.infographics">
+				<source>Select infographics</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

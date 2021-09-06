@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-02-08T15:53:32Z" product-name="rkw_graphics">
+		<header/>
+		<body>
+
+            <!-- tx_rkwinfographics_domain_model_infographic -->
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic">
+				<source>RKW Infographics: Infographic</source>
+				<target>RKW Infographics: Infografik</target>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.image_teaser">
+				<source>Teaser image</source>
+				<target>Teaserbild</target>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.image_detail">
+				<source>Detail image</source>
+				<target>Detailbild</target>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.image_social">
+				<source>Social media image</source>
+				<target>Social media-Bild</target>
+			</trans-unit>
+
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.download">
+				<source>Download</source>
+				<target>Datei</target>
+			</trans-unit>
+
+            <trans-unit id="flexform.select.infographics">
+				<source>Select infographics</source>
+				<target>Infographiken auswählen</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

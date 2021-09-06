@@ -1,0 +1,70 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:rkwBasics="http://typo3.org/ns/RKW/RkwBasics/ViewHelpers"
+    xmlns:rkwEtracker="http://typo3.org/ns/RKW/RkwEtracker/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+    <div id="mdl-c{infographic.uid}" class="mdl mdl--gallery">
+        <div class="mdl__inner">
+            <header class="mdl__header">
+                <span class="h4 mdl__headline">{infographic.title}</span>
+            </header>
+            <div class="mdl__content no-padding">
+                <f:if condition="{infographic.imageDetail}" >
+                    <f:then>
+                        <f:cObject typoscriptObjectPath="lib.txRkwInfographics.responsiveImageThumbnail" data="{infographic.imageDetail.uid}"/>
+                    </f:then>
+                    <f:else>
+                        &nbsp;
+                    </f:else>
+                </f:if>
+
+            </div>
+            <footer class="mdl__footer">
+                <div class="sharing nav flex-basis-12">
+                    <p class="sharing__label"><f:translate key="{settings.themeLanguageFile}:partials.gridElements.contentContainer.sharing.label" /></p>
+                    <ul class="sociallist">
+                        <li class="sociallist__item">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={f:cObject(typoscriptObjectPath:'lib.txRkwInfographics.resources.socialMedia.shareUrl', data:'{uid: \'{infographic.detailPage.uid}\'}')}" target="_blank" title="Facebook">
+                                <svg class="icon icon--24">
+                                    <use xlink:href="#ic-facebook" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="sociallist__item">
+                            <a href="https://twitter.com/intent/tweet?url={f:cObject(typoscriptObjectPath:'lib.txRkwInfographics.resources.socialMedia.shareUrl', data:'{uid: \'{infographic.detailPage.uid}\'}')}" target="_blank" title="Twitter">
+                                <svg class="icon icon--24">
+                                    <use xlink:href="#ic-twitter" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="sociallist__item">
+                            <a href="https://www.xing.com/app/user?op=share;url={f:cObject(typoscriptObjectPath:'lib.txRkwInfographics.resources.socialMedia.shareUrl', data:'{uid: \'{infographic.detailPage.uid}\'}')}" target="_blank" title="XING">
+                                <svg class="icon icon--24">
+                                    <use xlink:href="#ic-xing" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="sociallist__item">
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={f:cObject(typoscriptObjectPath:'lib.txRkwInfographics.resources.socialMedia.shareUrl', data:'{uid: \'{infographic.detailPage.uid}\'}')}" target="_blank" title="LinkedIn">
+                                <svg class="icon icon--24">
+                                    <use xlink:href="#ic-linkedin" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="sociallist__item">
+                            <f:cObject typoscriptObjectPath="lib.txRkwInfographics.resources.fileDownload" data="{uid: '{infographic.uid}'}" />
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <button class="mdl-close js-close-mdl">
+            <svg class="icon icon--48">
+                <use xlink:href="#ic-mobile-menu-close"/>
+            </svg>
+        </button>
+    </div>
+
+</html>

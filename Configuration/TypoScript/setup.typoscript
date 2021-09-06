@@ -1,0 +1,30 @@
+plugin.tx_rkwinfographics {
+    view {
+        templateRootPaths.0 = EXT:rkw_infographics/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_rkwinfographics.view.templateRootPath}
+        partialRootPaths.0 = EXT:rkw_infographics/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_rkwinfographics.view.partialRootPath}
+        layoutRootPaths.0 = EXT:rkw_infographics/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_rkwinfographics.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_rkwinfographics.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+    settings {
+    }
+}
+
+
+page.includeCSS.txRkwInfographics = EXT:rkw_infographics/Resources/Public/Css/Custom.css
+
+#===============================================================
+# Includes
+#===============================================================
+<INCLUDE_TYPOSCRIPT: source="DIR:./Includes" extensions="typoscript">

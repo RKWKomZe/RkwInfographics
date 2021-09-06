@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-02-08T15:53:32Z" product-name="rkw_maps">
+		<header/>
+		<body>
+
+		    <!-- tx_rkwinfographics_domain_model_infoprahics -->
+			<trans-unit id="tx_rkwinfographics_domain_model_infographic">
+				<source>Infographic</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

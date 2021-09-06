@@ -1,0 +1,56 @@
+####################################################################
+# Resources
+####################################################################
+lib.txRkwInfographics {
+
+    resources {
+
+        //=================================================================
+        fileDownload = FILES
+        fileDownload {
+
+            references {
+                table = tx_rkwinfographics_domain_model_infographic
+                uid.field = uid
+                fieldName = download
+            }
+
+            renderObj = COA
+            renderObj {
+                10 = TEXT
+                10.value = <svg class="icon icon--24"><use xlink:href="#ic-download" /></svg>
+                10.stdWrap.typolink {
+                    parameter.data = file:current:publicUrl
+                    ATagBeforeWrap = 1
+                    //  ATagParams = class="btn btn--primary btn--small"
+                    fileTarget = _self
+                    // eTracker
+                    userFunc = RKW\RkwEtracker\UserFunctions\Typolink->getParsedLinkWithDataAttributes
+                }
+
+            }
+        }
+
+        //=================================================================
+        socialMedia {
+
+            //  shareUrl = TEXT
+            //  shareUrl < plugin.tx_rkwbasics.libs.canonical.10
+            shareUrl = COA
+            shareUrl {
+                10 = TEXT
+                10 {
+                    typolink {
+                        parameter.data = field:uid
+                        forceAbsoluteUrl = 1
+                        returnLast = url
+                    }
+                }
+            }
+            shareUrl.stdWrap.rawUrlEncode = 1
+
+        }
+
+    }
+
+}
