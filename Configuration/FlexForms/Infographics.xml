@@ -7,11 +7,34 @@
 				</TCEforms>
                 <type>array</type>
                 <el>
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographic.options</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographic.list</numIndex>
+                                        <numIndex index="1">Infographic->list</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographic.detail</numIndex>
+                                        <numIndex index="1">Infographic->show</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+
                     <settings.infographicsUids>
                         <TCEforms>
                             <label>LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.select.infographics</label>
+                            <displayCond>FIELD:switchableControllerActions:=:Infographic->list</displayCond>
                             <config>
                                 <size>5</size>
+                                <minitems>0</minitems>
+                                <maxitems>24</maxitems>
                                 <type>select</type>
                                 <foreign_table>tx_rkwinfographics_domain_model_infographic</foreign_table>
                                 <foreign_table_where>
@@ -20,6 +43,7 @@
                             </config>
                         </TCEforms>
                     </settings.infographicsUids>
+
 				</el>
 			</ROOT>
 		</sDEF>

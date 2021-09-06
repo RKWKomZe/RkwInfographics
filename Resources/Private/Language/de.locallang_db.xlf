@@ -40,9 +40,22 @@
 				<target>Datei</target>
 			</trans-unit>
 
+            <!-- flexform -->
             <trans-unit id="flexform.select.infographics">
 				<source>Select infographics</source>
 				<target>Infographiken auswählen</target>
+			</trans-unit>
+			 <trans-unit id="flexform.infographic.options">
+				<source>Options</source>
+				<target>Optionen</target>
+			</trans-unit>
+			<trans-unit id="flexform.infographic.list">
+				<source>List</source>
+				<target>Listenansicht</target>
+			</trans-unit>
+			<trans-unit id="flexform.infographic.detail">
+				<source>Detail view</source>
+				<target>Detailansicht</target>
 			</trans-unit>
 
 		</body>

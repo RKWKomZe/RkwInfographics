@@ -33,8 +33,18 @@
 				<source>Download</source>
 			</trans-unit>
 
-            <trans-unit id="flexform.select.infographics">
+			<!-- flexform -->
+			><trans-unit id="flexform.select.infographics">
 				<source>Select infographics</source>
+			</trans-unit>
+			<trans-unit id="flexform.infographic.options">
+				<source>Options</source>
+			</trans-unit>
+			<trans-unit id="flexform.infographic.list">
+				<source>List</source>
+			</trans-unit>
+			<trans-unit id="flexform.infographic.detail">
+				<source>Detail view</source>
 			</trans-unit>
 
 		</body>

@@ -27,7 +27,7 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 {
 
     /**
-     *$infographicRepository
+     * infographicRepository
      *
      * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
      * @inject
@@ -46,5 +46,18 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $this->view->assign( 'infographicsList', $infographics );
 
     }
+
+    /**
+     * action show
+     *
+     * @param \RKW\RkwInfographic\Domain\Model\Infographic $infographic
+     * @return void
+     * @ignorevalidation $event
+     */
+    public function showAction(\RKW\RkwInfographic\Domain\Model\Infographic $infographic = null)
+    {
+        $this->view->assign('$infographic', $infographic);
+    }
+
 
 }
