@@ -162,7 +162,7 @@ return [
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'download',
                 ['maxitems' => 1],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+                'doc,docx,docm,xls,xlsx,pdf,zip'
             ),
         ],
     ]
