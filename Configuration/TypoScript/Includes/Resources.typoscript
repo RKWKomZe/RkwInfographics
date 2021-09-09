@@ -49,6 +49,35 @@ lib.txRkwInfographics {
             }
             shareUrl.stdWrap.rawUrlEncode = 1
 
+            shareMailUrl = COA
+            shareMailUrl {
+                wrap = |
+                10 = COA
+                10 {
+                    10 = TEXT
+                    10 {
+                        noTrimWrap = |mailto:?subject=| - Artikel auf |
+                        field = title
+                        stripHtml = 1
+                        rawUrlEncode = 1
+                    }
+                    20 = TEXT
+                    20 {
+                        value = {$plugin.tx_rkwtemplate_themeconfig.website.name}
+                    }
+                    30 = TEXT
+                    30 {
+                        noTrimWrap = |&body=Artikel auf | lesen: ||
+                        value = {$plugin.tx_rkwtemplate_themeconfig.website.name}
+                    }
+                    40 = TEXT
+                    40 {
+                        value < lib.txRkwInfographics.resources.socialMedia.shareUrl.10
+                        rawUrlEncode = 1
+                    }
+                }
+            }
+
         }
 
     }

@@ -53,6 +53,13 @@
                             </a>
                         </li>
                         <li class="sociallist__item">
+                            <a href="{f:cObject(typoscriptObjectPath:'lib.txRkwInfographics.resources.socialMedia.shareMailUrl', data:'{uid: \'{infographic.uid}\', title: \'{infographic.title}\'}')}" target="_blank" title="E-Mail">
+                                <svg class="icon icon--24">
+                                    <use xlink:href="#ic-mail" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="sociallist__item">
                             <f:cObject typoscriptObjectPath="lib.txRkwInfographics.resources.fileDownload" data="{uid: '{infographic.uid}'}" />
                         </li>
                     </ul>
