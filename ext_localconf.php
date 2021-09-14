@@ -31,6 +31,18 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'RKW.' . $extKey,
+            'Infographiccover',
+            array(
+                'Infographics' => 'cover'
+            ),
+            // non-cacheable actions
+            array(
+                'Infographics' => 'cover'
+            )
+        );
+
     },
     $_EXTKEY
 );

@@ -12,7 +12,7 @@ plugin.tx_rkwinfographics {
         storagePid =
     }
     settings {
-        # cat=plugin.tx_rkwinfographics//a; type=string; label=show pid
+        # cat=plugin.tx_rkwinfographics//a; type=string; label=PID for detail view
         showPid =
     }
 }

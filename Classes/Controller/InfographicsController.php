@@ -82,4 +82,25 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
     }
 
+    /**
+     * action cover
+     * returns cover name in view
+     *
+     * @return void
+     */
+    public function coverAction()
+    {
+        $getParams = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwinfographics_infographics');
+
+        $infographicUid = preg_replace('/[^0-9]/', '', $getParams['infographic']);
+        $infographic = $this->infographicRepository->findByIdentifier(filter_var($infographicUid, FILTER_SANITIZE_NUMBER_INT));
+
+        //$this->handleContentNotFound($event);
+
+        $this->view->assignMultiple(array(
+            'infographic' => $infographic,
+        ));
+
+    }
+
 }
