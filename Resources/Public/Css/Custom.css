@@ -1,3 +1,4 @@
-.mdl .mdl__content.no-padding {
-    padding: 0;
+.mdl.mdl--gallery {
+    width: 1000px;
+    height: 700px;
 }
