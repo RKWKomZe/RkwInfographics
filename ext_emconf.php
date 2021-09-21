@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'RKW Infographics',
-    'description'      => 'Adds lists of pages to content elements.',
+    'description'      => 'Adds gallery of specific graphics including separate detail view.',
     'category'         => 'plugin',
     'author'           => 'Christian Dilger',
     'author_email'     => 'c.dilger@addorange.de',
@@ -21,7 +21,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder'     => '0',
     'createDirs'       => '',
     'clearCacheOnLoad' => 0,
-    'version'          => '8.7.0',
+    'version'          => '8.7.1',
     'constraints'      => [
         'depends'   => [
             'typo3' => '7.6.0-8.7.99',
