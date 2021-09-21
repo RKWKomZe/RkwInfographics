@@ -11,11 +11,11 @@ call_user_func(
             'RKW.RkwInfographics',
             'Infographics',
             [
-                'Infographics' => 'list'
+                'Infographics' => 'list, show'
             ],
             // non-cacheable actions
             [
-                'Infographics' => 'list'
+                'Infographics' => ''
             ]
         );
 
@@ -27,7 +27,7 @@ call_user_func(
             ),
             // non-cacheable actions
             array(
-                'Infographics' => 'title'
+                'Infographics' => ''
             )
         );
 
@@ -39,7 +39,7 @@ call_user_func(
             ),
             // non-cacheable actions
             array(
-                'Infographics' => 'cover'
+                'Infographics' => ''
             )
         );
 

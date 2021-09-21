@@ -123,12 +123,22 @@ lib.txRkwInfographics {
             shareUrl {
                 10 = TEXT
                 10 {
+
                     typolink {
+
                         parameter = {$plugin.tx_rkwinfographics.settings.showPid}
-                        additionalParams.wrap = &tx_rkwinfographics_infographics[controller]=Infographics&tx_rkwinfographics_infographics[action]=show&tx_rkwinfographics_infographics[infographic]=|
-                        additionalParams.data = field:uid
                         forceAbsoluteUrl = 1
                         returnLast = url
+
+                        additionalParams.cObject = COA
+                        additionalParams.cObject {
+                            10 = TEXT
+                            10 {
+                                data = field:uid
+                                wrap = &tx_rkwinfographics_infographics[controller]=Infographics&tx_rkwinfographics_infographics[action]=show&tx_rkwinfographics_infographics[infographic]=|
+                            }
+                        }
+
                     }
                 }
             }
