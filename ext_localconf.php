@@ -15,7 +15,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Infographics' => ''
+                'Infographics' => 'list, show'
             ]
         );
 
