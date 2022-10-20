@@ -32,7 +32,7 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      * infographicRepository
      *
      * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $infographicRepository = null;
 
@@ -54,7 +54,7 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      *
      * @param \RKW\RkwInfographics\Domain\Model\Infographic $infographic
      * @return void
-     * @ignorevalidation $infographic
+     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("infographic")
      */
     public function showAction(\RKW\RkwInfographics\Domain\Model\Infographic $infographic = null)
     {
