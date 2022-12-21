@@ -92,7 +92,7 @@ lib.txRkwInfographics {
                 table = tx_rkwinfographics_domain_model_infographic
                 //  @todo: uid.field = uid
                 uid.data = GP:tx_rkwinfographics_infographics|infographic
-                fieldName = image_social
+                fieldName = image_detail
             }
 
             renderObj = COA
