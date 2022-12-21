@@ -27,7 +27,7 @@ call_user_func(
             ),
             // non-cacheable actions
             array(
-                'Infographics' => ''
+                'Infographics' => 'title'
             )
         );
 
@@ -39,7 +39,7 @@ call_user_func(
             ),
             // non-cacheable actions
             array(
-                'Infographics' => ''
+                'Infographics' => 'cover'
             )
         );
 
