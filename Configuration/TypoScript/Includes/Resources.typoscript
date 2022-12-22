@@ -18,16 +18,19 @@ lib.txRkwInfographics {
             renderObj = COA
             renderObj {
                 10 = TEXT
-                10.value = <svg class="icon icon--24"><use xlink:href="#ic-download" /></svg>
-                10.stdWrap.typolink {
-                    parameter.data = file:current:publicUrl
-                    ATagBeforeWrap = 1
-                    ATagParams = title="Herunterladen"
-                    fileTarget = _self
-                    // eTracker
-                    userFunc = RKW\RkwEtracker\UserFunctions\Typolink->getParsedLinkWithDataAttributes
-                }
+                10 {
+                    value = {LLL:EXT:rkw_template/Themes/Kompetenzzentrum2020/Resources/Private/Language/locallang.xlf:typoscript.pageInfo.fileDownload.download}
+                    insertData = 1
+                    stdWrap.typolink {
+                        parameter.data = file:current:publicUrl
+                        ATagBeforeWrap = 1
+                        ATagParams = class="btn btn--primary btn--small"
+                        fileTarget = _self
 
+                        // eTracker
+                        userFunc = RKW\RkwEtracker\UserFunctions\Typolink->getParsedLinkWithDataAttributes
+                    }
+                }
             }
         }
 
@@ -126,18 +129,9 @@ lib.txRkwInfographics {
 
                     typolink {
 
-                        parameter = {$plugin.tx_rkwinfographics.settings.showPid}
+                        parameter.data = TSFE:id
                         forceAbsoluteUrl = 1
                         returnLast = url
-
-                        additionalParams.cObject = COA
-                        additionalParams.cObject {
-                            10 = TEXT
-                            10 {
-                                data = field:uid
-                                wrap = &tx_rkwinfographics_infographics[controller]=Infographics&tx_rkwinfographics_infographics[action]=show&tx_rkwinfographics_infographics[infographic]=|
-                            }
-                        }
 
                     }
                 }
