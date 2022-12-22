@@ -11,36 +11,12 @@ call_user_func(
             'RKW.RkwInfographics',
             'Infographics',
             [
-                'Infographics' => 'list, show'
+                'Infographics' => 'list'
             ],
             // non-cacheable actions
             [
-                'Infographics' => 'list, show'
+                'Infographics' => 'list'
             ]
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'RKW.' . $extKey,
-            'Infographictitle',
-            array(
-                'Infographics' => 'title'
-            ),
-            // non-cacheable actions
-            array(
-                'Infographics' => 'title'
-            )
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'RKW.' . $extKey,
-            'Infographiccover',
-            array(
-                'Infographics' => 'cover'
-            ),
-            // non-cacheable actions
-            array(
-                'Infographics' => 'cover'
-            )
         );
 
     },

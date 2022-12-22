@@ -15,8 +15,6 @@ namespace RKW\RkwInfographics\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
-
 /**
  * InfographicsController
  *
@@ -46,60 +44,6 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
         $infographics = $this->infographicRepository->findByUidList(explode(',', $this->settings['infographicsUids']));
         $this->view->assign( 'infographicsList', $infographics );
-
-    }
-
-    /**
-     * action show
-     *
-     * @param \RKW\RkwInfographics\Domain\Model\Infographic $infographic
-     * @return void
-     * @ignorevalidation $infographic
-     */
-    public function showAction(\RKW\RkwInfographics\Domain\Model\Infographic $infographic = null)
-    {
-        $this->view->assign('infographic', $infographic);
-    }
-
-    /**
-     * action title
-     * returns title name in view
-     *
-     * @return void
-     */
-    public function titleAction()
-    {
-        $getParams = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwinfographics_infographics');
-
-        $infographicUid = preg_replace('/[^0-9]/', '', $getParams['infographic']);
-        $infographic = $this->infographicRepository->findByIdentifier(filter_var($infographicUid, FILTER_SANITIZE_NUMBER_INT));
-
-        //$this->handleContentNotFound($event);
-
-        $this->view->assignMultiple(array(
-            'infographic' => $infographic,
-        ));
-
-    }
-
-    /**
-     * action cover
-     * returns cover name in view
-     *
-     * @return void
-     */
-    public function coverAction()
-    {
-        $getParams = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwinfographics_infographics');
-
-        $infographicUid = preg_replace('/[^0-9]/', '', $getParams['infographic']);
-        $infographic = $this->infographicRepository->findByIdentifier(filter_var($infographicUid, FILTER_SANITIZE_NUMBER_INT));
-
-        //$this->handleContentNotFound($event);
-
-        $this->view->assignMultiple(array(
-            'infographic' => $infographic,
-        ));
 
     }
 
