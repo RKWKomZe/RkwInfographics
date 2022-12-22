@@ -37,11 +37,26 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                         </f:if>
                                     </div>
                                 </div>
-                                <div class="tile__content text-small">
-                                    <p>{infographic.title}</p>
+                                <div class="tile__content">
+                                    <h3 class="tile__title icon">
+                                        <span class="tile__title-icon tile__title-icon--margin">
+                                            <svg class="icon icon--32">
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ic-document"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tile__title-text">{infographic.title}</span>
+                                    </h3>
+                                    <div class="tile__text">
+                                        <f:format.html>{infographic.description}</f:format.html>
+                                    </div>
                                 </div>
-                                <div class="tile__link-overlay js-open-mdl" data-modal="mdl-c{infographic.uid}" title="">
-                                </div>
+                                <a
+                                    class="tile__link-overlay js-open-mdl"
+                                    data-modal="mdl-c{infographic.uid}"
+                                    title=""
+                                    href="#"
+                                >
+                                </a>
                             </div>
                         </div>
                     </f:for>

@@ -17,9 +17,8 @@
                     </f:else>
                 </f:if>
             </div>
-            <footer class="mdl__footer">
-                <div class="sharing nav flex-basis-12">
-                    <p class="sharing__label"><f:translate key="{settings.themeLanguageFile}:partials.gridElements.contentContainer.sharing.label" /></p>
+            <footer class="tile__footer">
+                <div class="nav flex space-between">
                     <ul class="sociallist">
                         <li class="sociallist__item">
                             <a href="https://www.facebook.com/sharer/sharer.php?u={f:cObject(typoscriptObjectPath:'lib.txRkwInfographics.resources.socialMedia.shareUrl', data:'{uid: \'{infographic.uid}\'}')}" target="_blank" title="Facebook">
@@ -56,10 +55,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="sociallist__item">
-                            <f:cObject typoscriptObjectPath="lib.txRkwInfographics.resources.fileDownload" data="{uid: '{infographic.uid}'}"/>
-                        </li>
                     </ul>
+                    <f:cObject typoscriptObjectPath="lib.txRkwInfographics.resources.fileDownload" data="{uid: '{infographic.uid}'}"/>
                 </div>
             </footer>
         </div>
