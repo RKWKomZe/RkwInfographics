@@ -90,7 +90,7 @@ lib.txRkwInfographics {
         fileThumbnail {
             references {
                 table = tx_rkwinfographics_domain_model_infographic
-                //  @todo: uid.field = uid
+                //  @todo uid.field = uid
                 uid.data = GP:tx_rkwinfographics_infographics|infographic
                 fieldName = image_social
             }

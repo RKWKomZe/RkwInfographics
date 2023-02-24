@@ -15,13 +15,13 @@ namespace RKW\RkwInfographics\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use RKW\RkwInfographics\Domain\Repository\InfographicRepository;
 
 /**
  * InfographicsController
  *
  * @author Christian Dilger <c.dilger@addorange.de>
- * @copyright Rkw Kompetenzzentrum
+ * @copyright RKW Kompetenzzentrum
  * @package RKW_RkwInfographics
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
@@ -29,37 +29,40 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 {
 
     /**
-     * infographicRepository
-     *
-     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
-     * @inject
+     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository|null
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-    protected $infographicRepository = null;
+    protected ?InfographicRepository $infographicRepository = null;
+
 
     /**
      * action list
      *
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function listAction()
+    public function listAction(): void
     {
-
-        $infographics = $this->infographicRepository->findByUidList(explode(',', $this->settings['infographicsUids']));
-        $this->view->assign( 'infographicsList', $infographics );
+        $infographics = $this->infographicRepository->findByUidList(
+            explode(',', $this->settings['infographicsUids'])
+        );
+        $this->view->assign('infographicsList', $infographics);
 
     }
+
 
     /**
      * action show
      *
-     * @param \RKW\RkwInfographics\Domain\Model\Infographic $infographic
+     * @param \RKW\RkwInfographics\Domain\Model\Infographic|null $infographic
      * @return void
-     * @ignorevalidation $infographic
+     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("infographic")
      */
-    public function showAction(\RKW\RkwInfographics\Domain\Model\Infographic $infographic = null)
+    public function showAction(\RKW\RkwInfographics\Domain\Model\Infographic $infographic = null): void
     {
         $this->view->assign('infographic', $infographic);
     }
+
 
     /**
      * action title
@@ -67,7 +70,7 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      *
      * @return void
      */
-    public function titleAction()
+    public function titleAction(): void
     {
         $getParams = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwinfographics_infographics');
 
@@ -79,16 +82,15 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $this->view->assignMultiple(array(
             'infographic' => $infographic,
         ));
-
     }
 
+
     /**
-     * action cover
      * returns cover name in view
      *
      * @return void
      */
-    public function coverAction()
+    public function coverAction(): void
     {
         $getParams = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_rkwinfographics_infographics');
 
