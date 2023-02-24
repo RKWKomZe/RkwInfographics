@@ -2,59 +2,48 @@
     xmlns:rkw="http://typo3.org/ns/RKW/RkwMaps/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
-<f:layout name="Default" />
+    <f:layout name="Default" />
 
-This Template is responsible for displaying a single view for a domain object
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-Resources:
-Private:
-Templates:
-Show.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
-<f:section name="main">
-
-    <f:if condition="{infographicsList}">
-        <f:then>
-
-            <div class="tiles-wrapper">
-                <div class="tiles flex-container flex-container--margin">
-                    <f:for each="{infographicsList}" as="infographic" iteration="iterator">
-                        <div class="flex-item flex-basis-3">
-                            <div class="tile">
-                                <div class="tile__header has-img">
-                                    <div class="tile__img">
-                                        <f:if condition="{infographic.imageTeaser}" >
-                                            <f:then>
-                                                <f:cObject typoscriptObjectPath="lib.txRkwInfographics.responsiveImageThumbnail" data="{infographic.imageTeaser.uid}"/>
-                                            </f:then>
-                                            <f:else>
-                                                &nbsp;
-                                            </f:else>
-                                        </f:if>
+    <f:section name="main">
+    
+        <f:if condition="{infographicsList}">
+            <f:then>
+    
+                <div class="tiles-wrapper">
+                    <div class="tiles flex-container flex-container--margin">
+                        <f:for each="{infographicsList}" as="infographic" iteration="iterator">
+                            <div class="flex-item flex-basis-3">
+                                <div class="tile">
+                                    <div class="tile__header has-img">
+                                        <div class="tile__img">
+                                            <f:if condition="{infographic.imageTeaser}" >
+                                                <f:then>
+                                                    <f:cObject typoscriptObjectPath="lib.txRkwInfographics.responsiveImageThumbnail" data="{infographic.imageTeaser.uid}"/>
+                                                </f:then>
+                                                <f:else>
+                                                    &nbsp;
+                                                </f:else>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                    <div class="tile__content text-small">
+                                        <p>{infographic.title}</p>
+                                    </div>
+                                    <div class="tile__link-overlay js-open-mdl" data-modal="mdl-c{infographic.uid}" title="">
                                     </div>
                                 </div>
-                                <div class="tile__content text-small">
-                                    <p>{infographic.title}</p>
-                                </div>
-                                <div class="tile__link-overlay js-open-mdl" data-modal="mdl-c{infographic.uid}" title="">
-                                </div>
                             </div>
-                        </div>
-                    </f:for>
+                        </f:for>
+                    </div>
                 </div>
-            </div>
-            <f:for each="{infographicsList}" as="infographic" iteration="iterator">
-                <f:render partial="Modal/Infographic" arguments="{_all}" />
-                <div class="mdl-layer js-mdl-layer"></div>
-            </f:for>
-
-        </f:then>
-    </f:if>
-
-</f:section>
+                <f:for each="{infographicsList}" as="infographic" iteration="iterator">
+                    <f:render partial="Modal/Infographic" arguments="{_all}" />
+                    <div class="mdl-layer js-mdl-layer"></div>
+                </f:for>
+    
+            </f:then>
+        </f:if>
+    
+    </f:section>
 
 </html>
