@@ -1,5 +1,4 @@
 <?php
-
 namespace RKW\RkwInfographics\Domain\Model;
 /*
  * This file is part of the TYPO3 CMS project.
@@ -14,6 +13,9 @@ namespace RKW\RkwInfographics\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Extbase\Domain\Model\File;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+
 /**
  * Infographic
  *
@@ -26,57 +28,51 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
     /**
-     * title
-     *
-     * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
-     */
-    protected $title = '';
-
-    /**
-     * description
-     *
      * @var string
      */
-    protected $description = '';
+    protected string $title = '';
+
 
     /**
-     * imageTeaser
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var string
      */
-    protected $imageTeaser = null;
+    protected string $description = '';
+
 
     /**
-     * imageDetail
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference|null
      */
-    protected $imageDetail = null;
+    protected ?FileReference $imageTeaser = null;
+
 
     /**
-     * imageSocial
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference|null
      */
-    protected $imageSocial = null;
+    protected ?FileReference $imageDetail = null;
+
 
     /**
-     * download
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference|null
      */
-    protected $download = null;
+    protected ?FileReference $imageSocial = null;
+
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference|null
+     */
+    protected ?FileReference $download  = null;
+
 
     /**
      * Returns the title
      *
      * @return string $title
      */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
+
 
     /**
      * Sets the title
@@ -84,20 +80,22 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $title
      * @return void
      */
-    public function setTitle($title)
+    public function setTitle(string $title)
     {
         $this->title = $title;
     }
+
 
     /**
      * Returns the description
      *
      * @return string $description
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
+
 
     /**
      * Sets the description
@@ -105,20 +103,22 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $description
      * @return void
      */
-    public function setDescription($description)
+    public function setDescription(string $description)
     {
         $this->description = $description;
     }
+
 
     /**
      * Returns the imageTeaser
      *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageTeaser
      */
-    public function getImageTeaser()
+    public function getImageTeaser():? FileReference
     {
         return $this->imageTeaser;
     }
+
 
     /**
      * Sets the imageTeaser
@@ -131,12 +131,13 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->imageTeaser = $imageTeaser;
     }
 
+
     /**
      * Returns the imageDetail
      *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageDetail
      */
-    public function getImageDetail()
+    public function getImageDetail():? FileReference
     {
         return $this->imageDetail;
     }
@@ -152,15 +153,17 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->imageDetail = $imageDetail;
     }
 
+
     /**
      * Returns the imageSocial
      *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageSocial
      */
-    public function getImageSocial()
+    public function getImageSocial():? FileReference
     {
         return $this->imageSocial;
     }
+
 
     /**
      * Sets the imageSocial
@@ -173,15 +176,17 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->imageSocial = $imageSocial;
     }
 
+
     /**
      * Returns the download
      *
      * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $download
      */
-    public function getDownload()
+    public function getDownload():? FileReference
     {
         return $this->download;
     }
+
 
     /**
      * Sets the download
@@ -193,5 +198,4 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->download = $download;
     }
-
 }

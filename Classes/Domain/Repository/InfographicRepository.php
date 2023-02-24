@@ -15,6 +15,8 @@ namespace RKW\RkwInfographics\Domain\Repository;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
+
 /**
  * InfographicRepository
  *
@@ -30,10 +32,10 @@ class InfographicRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * find all infographics by uid list
      *
      * @param array $uidList
-     * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface|array
+     * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface
      * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
      */
-    public function findByUidList(array $uidList)
+    public function findByUidList(array $uidList): QueryResultInterface
     {
         $query = $this->createQuery();
         $query->matching(
