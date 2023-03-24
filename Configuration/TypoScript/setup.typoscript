@@ -1,11 +1,19 @@
 plugin.tx_rkwinfographics {
     view {
-        templateRootPaths.0 = EXT:rkw_infographics/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_rkwinfographics.view.templateRootPath}
-        partialRootPaths.0 = EXT:rkw_infographics/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_rkwinfographics.view.partialRootPath}
-        layoutRootPaths.0 = EXT:rkw_infographics/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_rkwinfographics.view.layoutRootPath}
+        layoutRootPaths {
+            0 = EXT:rkw_infographics/Resources/Private/Layouts/
+            1 = {$plugin.tx_rkwinfographics.view.layoutRootPath}
+        }
+        templateRootPaths {
+            0 = EXT:rkw_infographics/Resources/Private/Templates/
+            1 = {$plugin.tx_rkwinfographics.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:rkw_infographics/Resources/Private/Partials/
+            1 = {$plugin.tx_rkwinfographics.view.partialRootPath}
+            2 = {$plugin.tx_coreextended.view.partialRootPath}
+        }
+
     }
     persistence {
         storagePid = {$plugin.tx_rkwinfographics.persistence.storagePid}
