@@ -5,35 +5,8 @@ lib.txRkwInfographics {
 
     resources {
 
-        //=================================================================
         fileDownload = FILES
         fileDownload {
-
-            references {
-                table = tx_rkwinfographics_domain_model_infographic
-                uid.field = uid
-                fieldName = download
-            }
-
-            renderObj = COA
-            renderObj {
-                10 = TEXT
-                10.value = <svg class="icon icon--24"><use xlink:href="#ic-download" /></svg>
-                10.stdWrap.typolink {
-                    parameter.data = file:current:publicUrl
-                    ATagBeforeWrap = 1
-                    ATagParams = title="Herunterladen"
-                    fileTarget = _self
-                    // eTracker
-                    userFunc = RKW\RkwEtracker\UserFunctions\Typolink->getParsedLinkWithDataAttributes
-                }
-
-            }
-        }
-
-        //=================================================================
-        fileDownloadFromDetailPage = FILES
-        fileDownloadFromDetailPage {
 
             references {
                 table = tx_rkwinfographics_domain_model_infographic
@@ -43,15 +16,23 @@ lib.txRkwInfographics {
 
             renderObj = COA
             renderObj {
-                10 = TEXT
-                10.value = Herunterladen
-                10.stdWrap.typolink {
-                    parameter.data = file:current:publicUrl
-                    ATagBeforeWrap = 1
-                    ATagParams = class="btn btn--primary btn--small"
 
-                    // eTracker
-                    userFunc = RKW\RkwEtracker\UserFunctions\Typolink->getParsedLinkWithDataAttributes
+                // store url
+                5 = LOAD_REGISTER
+                5.imageUrl.data = file:current:publicUrl
+
+                10 = TEXT
+                10 {
+                    value =  {LLL:EXT:rkw_template/Themes/Kompetenzzentrum2020/Resources/Private/Language/locallang.xlf:typoscript.pageInfo.fileDownload.download} ({file:current:extension})
+                    insertData = 1
+                    stdWrap.typolink {
+                        parameter.data = file:current:publicUrl
+                        ATagBeforeWrap = 1
+                        ATagParams = class="btn btn--primary btn--small"
+
+                        // eTracker
+                        userFunc = RKW\RkwEtracker\UserFunctions\Typolink->getParsedLinkWithDataAttributes
+                    }
                 }
             }
         }

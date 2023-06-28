@@ -15,14 +15,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title, image_teaser, image_detail, image_social, download',
+        'searchFields' => 'title, description, teaser, image_teaser, image_detail, image_social, download',
         'iconfile' => 'EXT:rkw_infographics/Resources/Public/Icons/tx_rkwinfographics_domain_model_infographic.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, image_teaser, image_detail, image_social, download',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, teaser, image_teaser, image_detail, image_social, download',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, image_teaser, image_detail, image_social, download, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, teaser, image_teaser, image_detail, image_social, download, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
 
@@ -111,6 +111,15 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 15,
+                'eval' => 'trim,required'
+            ],
+        ],
+        'teaser' => [
+            'exclude' => 0,
+            'label' => 'LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:tx_rkwinfographics_domain_model_infographic.teaser',
+            'config'      => [
+                'type' => 'input',
+                'size' => 30,
                 'eval' => 'trim,required'
             ],
         ],

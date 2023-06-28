@@ -2,3 +2,20 @@
     width: 1000px;
     height: 700px;
 }
+
+.mdl.mdl--gallery .mdl__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.mdl.mdl--gallery .mdl__inner .mdl__content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.mdl.mdl--gallery .mdl__inner .mdl__content picture {
+    width: 75%;
+    margin: 0 auto;
+    padding: 1em;
+}
