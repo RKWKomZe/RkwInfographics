@@ -8,6 +8,7 @@ CREATE TABLE tx_rkwinfographics_domain_model_infographic (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	description text NOT NULL,
+  teaser varchar(255) DEFAULT '' NOT NULL,
 
 	image_teaser int(11) unsigned NOT NULL default '0',
 	image_detail int(11) unsigned NOT NULL default '0',
