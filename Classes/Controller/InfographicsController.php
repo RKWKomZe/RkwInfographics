@@ -29,11 +29,10 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 {
 
     /**
-     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository|null
+     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected ?InfographicRepository $infographicRepository = null;
-
 
     /**
      * action list
@@ -47,7 +46,6 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
             explode(',', $this->settings['infographicsUids'])
         );
         $this->view->assign('infographicsList', $infographics);
-
     }
 
 
