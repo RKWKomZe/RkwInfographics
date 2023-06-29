@@ -1,5 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:rkw="http://typo3.org/ns/RKW/RkwMaps/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
     <f:layout name="Default" />
@@ -8,29 +7,33 @@
     
         <f:if condition="{infographicsList}">
             <f:then>
-    
                 <div class="tiles-wrapper">
                     <div class="tiles flex-container flex-container--margin">
                         <f:for each="{infographicsList}" as="infographic" iteration="iterator">
                             <div class="flex-item flex-basis-3">
-                                <div class="tile">
+                                <div class="tile tile--infographic">
                                     <div class="tile__header has-img">
                                         <div class="tile__img">
                                             <f:if condition="{infographic.imageTeaser}" >
-                                                <f:then>
-                                                    <f:cObject typoscriptObjectPath="lib.txRkwInfographics.responsiveImageThumbnail" data="{infographic.imageTeaser.uid}"/>
-                                                </f:then>
-                                                <f:else>
-                                                    &nbsp;
-                                                </f:else>
+                                                <f:cObject typoscriptObjectPath="lib.txRkwInfographics.responsiveImageThumbnail" data="{infographic.imageTeaser.uid}"/>
                                             </f:if>
                                         </div>
                                     </div>
-                                    <div class="tile__content text-small">
-                                        <p>{infographic.title}</p>
+                                    <div class="tile__content">
+                                        <h3 class="tile__title">
+                                            <span class="tile__title-text">{infographic.title}</span>
+                                        </h3>
+                                        <div class="tile__text">
+                                            <p>{infographic.teaser}</p>
+                                        </div>
                                     </div>
-                                    <div class="tile__link-overlay js-open-mdl" data-modal="mdl-c{infographic.uid}" title="">
-                                    </div>
+                                    <a 
+                                        class="tile__link-overlay js-open-mdl" 
+                                        data-modal="mdl-c{infographic.uid}" 
+                                        title=""
+                                        href="#"
+                                    >
+                                    </a>
                                 </div>
                             </div>
                         </f:for>
@@ -40,7 +43,6 @@
                     <f:render partial="Modal/Infographic" arguments="{_all}" />
                     <div class="mdl-layer js-mdl-layer"></div>
                 </f:for>
-    
             </f:then>
         </f:if>
     
