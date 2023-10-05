@@ -15,7 +15,12 @@
 				<target>Titel</target>
 			</trans-unit>
 
-            <trans-unit id="tx_rkwinfographics_domain_model_infographic.description">
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.teaser">
+				<source>Teaser</source>
+				<target>Kurztext</target>
+			</trans-unit>
+
+			<trans-unit id="tx_rkwinfographics_domain_model_infographic.description">
 				<source>Description</source>
 				<target>Beschreibung</target>
 			</trans-unit>

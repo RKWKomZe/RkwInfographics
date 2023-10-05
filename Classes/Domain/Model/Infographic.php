@@ -40,6 +40,12 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
 
     /**
+     * @var string
+     */
+    protected string $teaser = '';
+
+
+    /**
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference|null
      */
     protected ?FileReference $imageTeaser = null;
@@ -106,6 +112,29 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDescription(string $description)
     {
         $this->description = $description;
+    }
+
+
+    /**
+     * Returns the teaser
+     *
+     * @return string $teaser
+     */
+    public function getTeaser(): string
+    {
+        return $this->teaser;
+    }
+
+
+    /**
+     * Sets the teaser
+     *
+     * @param string $teaser
+     * @return void
+     */
+    public function setTeaser(string $teaser)
+    {
+        $this->teaser = $teaser;
     }
 
 
