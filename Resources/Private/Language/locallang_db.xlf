@@ -13,6 +13,10 @@
 				<source>Title</source>
 			</trans-unit>
 
+            <trans-unit id="tx_rkwinfographics_domain_model_infographic.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+
             <trans-unit id="tx_rkwinfographics_domain_model_infographic.description">
 				<source>Description</source>
 			</trans-unit>

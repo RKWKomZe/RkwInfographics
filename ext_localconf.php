@@ -9,7 +9,7 @@ call_user_func(
         //=================================================================
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'RKW.RkwInfographics',
-            'main',
+            'Main',
             [
                 'Infographics' => 'list, show'
             ],
@@ -21,7 +21,7 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'RKW.' . $extKey,
-            'title',
+            'Title',
             array(
                 'Infographics' => 'title'
             ),
@@ -33,7 +33,7 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'RKW.' . $extKey,
-            'cover',
+            'Cover',
             array(
                 'Infographics' => 'cover'
             ),
