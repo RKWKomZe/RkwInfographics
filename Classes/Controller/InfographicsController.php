@@ -34,6 +34,16 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     protected ?InfographicRepository $infographicRepository = null;
 
+
+    /**
+     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
+     */
+    public function injectInfographicRepository(InfographicRepository $infographicRepository)
+    {
+        $this->infographicRepository = $infographicRepository;
+    }
+
+
     /**
      * action list
      *
