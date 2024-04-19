@@ -18,9 +18,6 @@ return [
         'searchFields' => 'title, description, teaser, image_teaser, image_detail, image_social, download',
         'iconfile' => 'EXT:rkw_infographics/Resources/Public/Icons/tx_rkwinfographics_domain_model_infographic.gif'
     ],
-    'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, teaser, image_teaser, image_detail, image_social, download',
-    ],
     'types' => [
         '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, teaser, image_teaser, image_detail, image_social, download, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
@@ -43,7 +40,6 @@ return [
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
-            'exclude' => 0,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.l18n_parent',
             'config' => [
                 'type' => 'select',
