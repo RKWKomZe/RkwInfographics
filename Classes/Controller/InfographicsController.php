@@ -29,17 +29,17 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 {
 
     /**
-     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
+     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository|null
      */
     protected ?InfographicRepository $infographicRepository = null;
 
 
     /**
-     * @var \RKW\RkwInfographics\Domain\Repository\InfographicRepository
+     * @param InfographicRepository $infographicRepository
      */
-    public function injectInfographicRepository(InfographicRepository $infographicRepository)
-    {
+    public function __construct(
+        InfographicRepository $infographicRepository
+    ) {
         $this->infographicRepository = $infographicRepository;
     }
 
@@ -87,9 +87,9 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
         //$this->handleContentNotFound($event);
 
-        $this->view->assignMultiple(array(
+        $this->view->assignMultiple([
             'infographic' => $infographic,
-        ));
+        ]);
     }
 
 
@@ -107,9 +107,9 @@ class InfographicsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 
         //$this->handleContentNotFound($event);
 
-        $this->view->assignMultiple(array(
+        $this->view->assignMultiple([
             'infographic' => $infographic,
-        ));
+        ]);
 
     }
 

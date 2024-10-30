@@ -13,6 +13,7 @@
                             <onChange>reload</onChange>
                             <config>
                                 <type>select</type>
+                                <renderType>selectSingle</renderType>
                                 <items type="array">
                                     <numIndex index="0" type="array">
                                         <numIndex index="0">LLL:EXT:rkw_infographics/Resources/Private/Language/locallang_db.xlf:flexform.infographic.list</numIndex>
@@ -36,6 +37,7 @@
                                 <minitems>0</minitems>
                                 <maxitems>24</maxitems>
                                 <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
                                 <foreign_table>tx_rkwinfographics_domain_model_infographic</foreign_table>
                                 <foreign_table_where>
                                     AND tx_rkwinfographics_domain_model_infographic.deleted = 0 AND tx_rkwinfographics_domain_model_infographic.hidden = 0 ORDER BY tx_rkwinfographics_domain_model_infographic.title

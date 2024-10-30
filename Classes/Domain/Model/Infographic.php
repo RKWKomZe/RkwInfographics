@@ -13,7 +13,6 @@ namespace RKW\RkwInfographics\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Extbase\Domain\Model\File;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 
 /**
@@ -86,7 +85,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $title
      * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -109,7 +108,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $description
      * @return void
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }
@@ -132,7 +131,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param string $teaser
      * @return void
      */
-    public function setTeaser(string $teaser)
+    public function setTeaser(string $teaser): void
     {
         $this->teaser = $teaser;
     }
@@ -155,7 +154,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageTeaser
      * @return void
      */
-    public function setImageTeaser(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageTeaser)
+    public function setImageTeaser(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageTeaser): void
     {
         $this->imageTeaser = $imageTeaser;
     }
@@ -177,7 +176,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageDetail
      * @return void
      */
-    public function setImageDetail(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageDetail)
+    public function setImageDetail(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageDetail): void
     {
         $this->imageDetail = $imageDetail;
     }
@@ -200,7 +199,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageSocial
      * @return void
      */
-    public function setImageSocial(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageSocial)
+    public function setImageSocial(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageSocial): void
     {
         $this->imageSocial = $imageSocial;
     }
@@ -223,7 +222,7 @@ class Infographic extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $download
      * @return void
      */
-    public function setDownload(\TYPO3\CMS\Extbase\Domain\Model\FileReference $download)
+    public function setDownload(\TYPO3\CMS\Extbase\Domain\Model\FileReference $download): void
     {
         $this->download = $download;
     }
