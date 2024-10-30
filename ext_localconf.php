@@ -22,25 +22,25 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'RKW.' . $extKey,
             'Title',
-            array(
+            [
                 'Infographics' => 'title'
-            ),
+            ],
             // non-cacheable actions
-            array(
+            [
                 'Infographics' => ''
-            )
+            ]
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'RKW.' . $extKey,
             'Cover',
-            array(
+            [
                 'Infographics' => 'cover'
-            ),
+            ],
             // non-cacheable actions
-            array(
+            [
                 'Infographics' => ''
-            )
+            ]
         );
 
     },
